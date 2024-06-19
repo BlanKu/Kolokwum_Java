@@ -8,11 +8,15 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
+//To całe cudo trzeba zaimportować
 
 public class Server {
+    //To jest po prostu nazwa serwera
     private ServerSocket serverSocket;
+    //To jest lista użytkowników serwera;
     private List<ClientThread> clients = new ArrayList<>();
 
+    //Metoda tworząca serwer
     public Server(int port) {
         try {
             this.serverSocket = new ServerSocket(port);
@@ -21,6 +25,7 @@ public class Server {
         }
     }
 
+    //Funkcja listen
     public void listen(){
         System.out.println("Oczekiwanie...");
         while(true){
